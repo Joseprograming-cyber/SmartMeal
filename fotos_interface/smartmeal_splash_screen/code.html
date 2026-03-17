@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df20d",
+                        "background-light": "#f5f8f5",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>SmartMeal Splash Screen</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-screen w-full flex-col items-center justify-center overflow-x-hidden p-6">
+<!-- Main Logo Container -->
+<div class="relative flex flex-col items-center justify-center animate-fade-in">
+<!-- Stylized Smart Icon -->
+<div class="mb-8 flex h-32 w-32 items-center justify-center rounded-xl bg-primary/10 shadow-sm border border-primary/20">
+<span class="material-symbols-outlined text-primary !text-7xl">
+                    restaurant_menu
+                </span>
+<!-- Abstract smart overlay -->
+<div class="absolute -top-2 -right-2 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-background-dark shadow-md">
+<span class="material-symbols-outlined !text-2xl">
+                        insights
+                    </span>
+</div>
+</div>
+<!-- App Name -->
+<h1 class="text-slate-900 dark:text-slate-100 tracking-tight text-5xl font-bold leading-tight text-center">
+                SmartMeal
+            </h1>
+<!-- Subtitle -->
+<h2 class="text-primary text-xl font-semibold leading-tight tracking-[-0.015em] text-center pt-2">
+                Tu menú inteligente
+            </h2>
+</div>
+<!-- Tagline and Loading Area -->
+<div class="absolute bottom-16 w-full max-w-xs px-4">
+<div class="flex flex-col gap-4">
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal text-center">
+                    Planifica, compra, disfruta
+                </p>
+<!-- Loading Indicator -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center px-1">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-semibold">Cargando...</p>
+<p class="text-primary text-xs font-bold">75%</p>
+</div>
+<div class="h-2 w-full rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<div class="h-full rounded-full bg-primary transition-all duration-500" style="width: 75%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Background Element -->
+<div class="fixed top-0 right-0 -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="fixed bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+</div>
+<!-- Hidden HeaderImage implementation for reference logic -->
+<div class="hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-[#f8fcf8] group/design-root overflow-x-hidden" style='font-family: "Be Vietnam Pro", "Noto Sans", sans-serif;'>
+<div class="@container">
+<div class="@[480px]:px-4 @[480px]:py-3">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-[#f8fcf8] @[480px]:rounded-xl min-h-80" data-alt="Abstract green pattern representing healthy smart food" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCfvnTEoJykl6iRTsaJ24imybpFKZJkCD5Eq_rIE1YB3M_bBuC5xmGFVudarn1GeBQOik3YsD3TOa7M_BXk3OMZisoxkJ2mV-9TXTqjIfKXIAdgF_E3ZSPBKSGBOwFt8TAwfeGyI66BfMP-YmpSvZoc-XtSPASg3DL7usP-vT5Zh68TBZBxGD2D0gTMd69jxy7uTvxtSK_wd0NtJGVdlAgx4nJpgr1WzfUdumgKuR8BZl8Yc42UFhJJrGwVRBsNUq7YfiCps-CX1d8");'></div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

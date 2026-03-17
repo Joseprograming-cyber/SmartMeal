@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SmartMeal Marketplace Comparison</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df20d",
+                        "background-light": "#f5f8f5",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full max-w-md mx-auto flex-col bg-background-light dark:bg-background-dark overflow-x-hidden shadow-2xl">
+<!-- Header -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Marketplace Comparison</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-xl h-12 bg-transparent text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+<!-- Recipe Context Card -->
+<div class="px-4 py-2">
+<div class="bg-primary/10 border border-primary/20 rounded-xl p-4 flex items-center gap-4">
+<div class="h-16 w-16 rounded-lg bg-cover bg-center shrink-0" data-alt="Close up of a healthy green salad bowl" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYjTiCfPACQuXq_Y52tDMHkN6pMfzgmk-5WMUwKpvqBogCkCpqiUTAnwmH4-OSbeFNPWeQDpSMjFNqDZMHktV6_2VZ_m8bAwNJLdF_amcVYFEOe5i7vUolihWfJWpnjBuSyolAH4zwFXU4H-nWlO5pqFc48owGTlfGANkySec3aP76S64Ryx5fsXhh-OPUDJGsUeyCgn0RusVrisVaxiSJamlS3DSWiztuR6CIuqrd7rb_YyL9IWGsfQdsLUCQSj6Wk13dQC1xHBY')"></div>
+<div>
+<p class="text-xs font-medium text-primary uppercase tracking-wider">Shopping List For</p>
+<h3 class="text-base font-bold">Avocado Green Salad</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">8 items in basket</p>
+</div>
+</div>
+</div>
+<!-- Filter Tabs -->
+<div class="pb-3 sticky top-[64px] bg-background-light dark:bg-background-dark z-10">
+<div class="flex border-b border-primary/10 px-4 justify-between">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-primary text-slate-900 dark:text-slate-100 pb-[13px] pt-4 flex-1" href="#">
+<p class="text-sm font-bold tracking-tight">All Stores</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-[13px] pt-4 flex-1" href="#">
+<p class="text-sm font-bold tracking-tight">Cheapest</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-[13px] pt-4 flex-1" href="#">
+<p class="text-sm font-bold tracking-tight">Closest</p>
+</a>
+</div>
+</div>
+<!-- Marketplace List -->
+<div class="flex flex-col gap-4 p-4">
+<!-- Store Item: Cheapest -->
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-sm border border-primary/20 relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-primary px-3 py-1 rounded-bl-lg">
+<span class="text-[10px] font-bold text-slate-900 uppercase">Best Price</span>
+</div>
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-1 gap-4">
+<div class="size-14 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">storefront</span>
+</div>
+<div class="flex flex-col">
+<h4 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight">FreshMart Central</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm">0.8 km away • Open until 10 PM</p>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="text-2xl font-bold text-primary">$18.50</span>
+<span class="text-xs text-slate-400 line-through">$24.00</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 flex cursor-pointer items-center justify-center rounded-xl h-10 px-4 bg-primary text-slate-900 gap-2 text-sm font-bold">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+<span>Buy Now</span>
+</button>
+<button class="flex items-center justify-center rounded-xl h-10 w-12 bg-primary/20 text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">directions</span>
+</button>
+</div>
+</div>
+<!-- Store Item: Closest -->
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-1 gap-4">
+<div class="size-14 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-slate-500 text-3xl">local_mall</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h4 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight">QuickStop Grocery</h4>
+<span class="bg-blue-100 text-blue-700 text-[10px] px-1.5 py-0.5 rounded font-bold uppercase">Nearest</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">0.2 km away • 24 Hours</p>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="text-2xl font-bold text-slate-900 dark:text-slate-100">$22.15</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 flex cursor-pointer items-center justify-center rounded-xl h-10 px-4 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100 gap-2 text-sm font-bold">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+<span>Buy Now</span>
+</button>
+<button class="flex items-center justify-center rounded-xl h-10 w-12 bg-primary/20 text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">directions</span>
+</button>
+</div>
+</div>
+<!-- Store Item: Organic -->
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-1 gap-4">
+<div class="size-14 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-slate-500 text-3xl">eco</span>
+</div>
+<div class="flex flex-col">
+<h4 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight">Nature's Best</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm">1.5 km away • Closes 8 PM</p>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="text-2xl font-bold text-slate-900 dark:text-slate-100">$26.90</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 flex cursor-pointer items-center justify-center rounded-xl h-10 px-4 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100 gap-2 text-sm font-bold">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+<span>Buy Now</span>
+</button>
+<button class="flex items-center justify-center rounded-xl h-10 w-12 bg-primary/20 text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">directions</span>
+</button>
+</div>
+</div>
+<!-- Map Preview Section -->
+<div class="mt-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-base font-bold pb-3">Stores Near You</h3>
+<div class="w-full h-48 rounded-xl bg-slate-200 overflow-hidden relative" data-location="Seattle, Washington" style="">
+<img class="w-full h-full object-cover opacity-80" data-alt="Stylized city map with several grocery store pins" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt5FgHCXQOZDbH8DY9G1EeksaXrk-TEM1Q9M72RNmZ9MfPFXQiooDhCQZyxKflrf1066LUKUgl4XISw7w-k6h96pPSkw8TA1oOTTnOsK1qwbCip1GdVcvIB_ry6WuKr4xig93rIL6y0xYQdc0Mg0nXeanaWzvnfQ6cbCDdusMVgdM9lggL7Vydv_cf36GrDLBD2SH3cZuUcr1XSjyBgdipWWVeixEVULBBg9giPa3S9FgJxRun7X6ewzZXSSCPdHnroXppVQ3rjuM"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="bg-primary size-4 rounded-full border-2 border-white shadow-lg animate-pulse"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Spacer for Bottom Nav -->
+<div class="h-20"></div>
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 w-full max-w-md bg-background-light dark:bg-background-dark border-t border-primary/10 px-4 pb-4 pt-2 flex gap-2 z-20">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<p class="text-[10px] font-medium leading-normal">Recipes</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">kitchen</span>
+<p class="text-[10px] font-medium leading-normal">Pantry</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">storefront</span>
+<p class="text-[10px] font-medium leading-normal">Markets</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium leading-normal">Profile</p>
+</a>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SmartMeal - Weekly Menu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df20d",
+                        "background-light": "#f5f8f5",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-xl overflow-x-hidden">
+<!-- Header -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-20 border-b border-primary/10">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center">
+<span class="material-symbols-outlined">menu</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">SmartMeal</h2>
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center justify-end">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+</div>
+<!-- Date Selector -->
+<div class="bg-background-light dark:bg-background-dark sticky top-[64px] z-10">
+<div class="flex border-b border-primary/10 px-4 gap-6 overflow-x-auto no-scrollbar">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-primary text-slate-900 dark:text-slate-100 pb-3 pt-4 shrink-0" href="#">
+<p class="text-xs font-medium opacity-60">MON</p>
+<p class="text-sm font-bold">12</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-4 shrink-0" href="#">
+<p class="text-xs font-medium opacity-60">TUE</p>
+<p class="text-sm font-bold">13</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-4 shrink-0" href="#">
+<p class="text-xs font-medium opacity-60">WED</p>
+<p class="text-sm font-bold">14</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-4 shrink-0" href="#">
+<p class="text-xs font-medium opacity-60">THU</p>
+<p class="text-sm font-bold">15</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-4 shrink-0" href="#">
+<p class="text-xs font-medium opacity-60">FRI</p>
+<p class="text-sm font-bold">16</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-4 shrink-0" href="#">
+<p class="text-xs font-medium opacity-60">SAT</p>
+<p class="text-sm font-bold">17</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-4 shrink-0" href="#">
+<p class="text-xs font-medium opacity-60">SUN</p>
+<p class="text-sm font-bold">18</p>
+</a>
+</div>
+</div>
+<!-- Content Area -->
+<main class="flex-1 pb-24">
+<h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight px-4 pb-3 pt-6">Weekly Menu</h2>
+<div class="flex flex-col gap-6 px-4">
+<!-- Monday Card -->
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-sm bg-white dark:bg-background-dark border border-primary/5 overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover" data-alt="Grilled lemon herb chicken with roasted vegetables" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBX0nmDJhHDnSE9zAXyePI-GfS2UgCCJ5WaKXUkktG19V8HwTxGhzXQwV8NyufwixFrYoKqOKdoyvY0ZHfkFGVdhHj5LToWsvZr8O2Kuqa2Ihd8vsX0ZEpJEEo58_R1NjG1y-tgjDvr-oIQmi6pf_8ucbRdbcx5vQZU6PDaKIYu3WppyUR-VA3nM1IaqHQJq1SiPm56PQR78O1hS-MVebTC2iwYkt4vOOL-iD6NK6lOt-S6A1jUIU6wZ5ML5UbelBQz-kqW1JwBLYA");'></div>
+<div class="flex flex-col gap-2 p-4">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight">Lemon Herb Chicken</p>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Monday</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-normal">Roasted seasonal vegetables with citrus zest and fresh rosemary garnish.</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-primary material-symbols-outlined text-sm">fitness_center</span>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">High Protein • 450 kcal</p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<button class="flex-1 mr-2 flex items-center justify-center rounded-lg h-10 px-4 bg-primary text-slate-900 text-sm font-bold">
+                                See Ingredients
+                            </button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-primary/20 text-primary">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Tuesday Card -->
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-sm bg-white dark:bg-background-dark border border-primary/5 overflow-hidden opacity-90">
+<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover" data-alt="Fresh quinoa salad with avocado and lime" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAdw0JZZ1XTT43LZFj84MxI781GTdeNLlabrEbjvi8Nwlz1JS587z0plQ3tYUQY1tiA2MRfQnTlDzkzqTsoS1VK4ZzRHFDXkaHfjXRFkxilrK822ESjP7CDe7FaXT_gyPFHQlbPdvbt38Xb6RuA-Ja1b1ptF3IgRq81Y8eVNlrKfFGYa6jWgv-JQNW9-B3c4hx4lMGiPoRq6A_3aaQJ7CLmH8Xseoxan8AwgLOQHeRADWr97q0T57w4zo54iglbcXQrvnS00LRnOzA");'></div>
+<div class="flex flex-col gap-2 p-4">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight">Quinoa Power Bowl</p>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Tuesday</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-normal">Tri-color quinoa with sliced avocado, cherry tomatoes, and honey-lime dressing.</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-primary material-symbols-outlined text-sm">eco</span>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Vegan • 380 kcal</p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<button class="flex-1 mr-2 flex items-center justify-center rounded-lg h-10 px-4 bg-primary text-slate-900 text-sm font-bold">
+                                See Ingredients
+                            </button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-primary/20 text-primary">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Wednesday Card -->
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-sm bg-white dark:bg-background-dark border border-primary/5 overflow-hidden opacity-90">
+<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover" data-alt="Pan-seared Atlantic salmon with asparagus" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3-uIHYoyZmxn-YZPECUPuy-AwjJ9ll6Euh4V5GFZQB09pphh18hB62vOLGDxCNPevcVo5BMVMCERwUorRlueaG5gspEmvP7olEHWDe1LJb9iCQAFGGhVunpYElGlk6J56VdHcvwseQuRbNMM0aMHG-uY6CwWr6MIxyedXYqd9sy7DPvCVlzxH66uzxb2Aj3jvPmntOrMMPD580kqnwZzaEtz3OJA56VpRIHgy6OuBjvcXbGWxni3sBMC_T1JyPOwb7GlWEdaPQCI");'></div>
+<div class="flex flex-col gap-2 p-4">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight">Pan-Seared Salmon</p>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Wednesday</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-normal">Atlantic salmon with a crust of black pepper, served over steamed asparagus.</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-primary material-symbols-outlined text-sm">set_meal</span>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Omega-3 Rich • 520 kcal</p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<button class="flex-1 mr-2 flex items-center justify-center rounded-lg h-10 px-4 bg-primary text-slate-900 text-sm font-bold">
+                                See Ingredients
+                            </button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-primary/20 text-primary">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-background-light dark:bg-background-dark border-t border-primary/10 px-4 pb-6 pt-2 flex justify-between items-center z-30">
+<a class="flex flex-col items-center gap-1 text-slate-900 dark:text-slate-100" href="#">
+<span class="material-symbols-outlined filled">calendar_today</span>
+<p class="text-xs font-bold">Menu</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<p class="text-xs font-medium">Recipes</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<p class="text-xs font-medium">Stats</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-xs font-medium">Profile</p>
+</a>
+</div>
+</div>
+</body></html>

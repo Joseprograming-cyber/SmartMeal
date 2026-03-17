@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df20d",
+                        "background-light": "#f5f8f5",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Tu Menú Inteligente</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header Section -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-primary/10">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center">
+<span class="material-symbols-outlined">menu</span>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Tu Menú Inteligente</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-xl h-12 bg-transparent text-slate-900 dark:text-slate-100 p-0">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<!-- Weekly Calendar Selector -->
+<nav class="pb-3 bg-background-light dark:bg-background-dark">
+<div class="flex border-b border-primary/10 px-4 gap-4 overflow-x-auto no-scrollbar">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-primary text-slate-900 dark:text-slate-100 pb-[13px] pt-4 min-w-[50px]" href="#">
+<p class="text-sm font-bold">Lun</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-[13px] pt-4 min-w-[50px]" href="#">
+<p class="text-sm font-bold">Mar</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-[13px] pt-4 min-w-[50px]" href="#">
+<p class="text-sm font-bold">Mié</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-[13px] pt-4 min-w-[50px]" href="#">
+<p class="text-sm font-bold">Jue</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-[13px] pt-4 min-w-[50px]" href="#">
+<p class="text-sm font-bold">Vie</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-[13px] pt-4 min-w-[50px]" href="#">
+<p class="text-sm font-bold">Sáb</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-[13px] pt-4 min-w-[50px]" href="#">
+<p class="text-sm font-bold">Dom</p>
+</a>
+</div>
+</nav>
+<!-- Budget Overview -->
+<section class="flex flex-col gap-3 p-4 bg-white dark:bg-slate-900/50 mx-4 mt-4 rounded-xl shadow-sm border border-primary/5">
+<div class="flex justify-between items-end">
+<div>
+<h2 class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Lunes</h2>
+<p class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight">Presupuesto Diario</p>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold tracking-tight">$12.500 / <span class="text-slate-400">$16.000</span></p>
+</div>
+<div class="w-full bg-primary/20 h-3 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 78%;"></div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm font-bold">check_circle</span>
+<p class="text-primary text-sm font-bold">Dentro del presupuesto</p>
+</div>
+</section>
+<!-- Menu for the Day -->
+<main class="flex flex-col gap-4 p-4 mb-24">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Menú del Día</h3>
+<!-- Breakfast Card -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-900/50 p-3 rounded-xl border border-primary/5">
+<div class="size-20 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Tostadas con huevo y aguacate saludable" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW3PWII8sERgr-nvOyrM-cOifwewhZm0H8n-SeBRqOzdnD-sbvUfbh-Ioyko0er04Ms1J75HHttwEz4C2J5R0SAUIB8t4RViLDyUEwtTxBIgOZqwzMVQzGfDhAas9JjuMCv5UQmX3eXtfdjqHVRGncmHqdd23yWWBCmFJSZ00iOKma1E0xkjExJmlNowSvTRUjbopYjUyfsUBbN2io7JCXGUJkNPA3xZBQ8QW31qvbN9UZQr-y5sT5y74s8yMUe0ju7pqArwjGDsM"/>
+</div>
+<div class="flex-1">
+<p class="text-primary text-xs font-bold uppercase">Desayuno</p>
+<h4 class="text-slate-900 dark:text-slate-100 font-bold">Tostadas con Aguacate</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Costo est.: <span class="font-bold text-slate-900 dark:text-slate-100">$2.800</span></p>
+</div>
+<button class="size-10 flex items-center justify-center bg-primary/10 text-primary rounded-full">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<!-- Lunch Card -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-900/50 p-3 rounded-xl border border-primary/5">
+<div class="size-20 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Plato de pollo con arroz y ensalada fresca" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdae68BTNwfWrvLbgvwk8LiWTAFUTNR1VfovQdJ7Gu6rzdTlkuPW8wQdw59IQx5w7Y-AsBvoCEAEZbuFzShcUSvN-D8xbh61i3dmHRx-eSOmLCSc8jLZlzrX4vSvSMxzQ5TemkBMjPQU34E9z_UNIOehO-UNmXb3D3X9hAzDUnWfW82wXr-gFnAI_8dblK1UOnbez6hdQWQhcC0FCFJDH_XK36S75hTULCtVXGdWH0KiUwRRbOnnv1PjroBTBPVx0anpBpbP38JIw"/>
+</div>
+<div class="flex-1">
+<p class="text-primary text-xs font-bold uppercase">Almuerzo</p>
+<h4 class="text-slate-900 dark:text-slate-100 font-bold">Pollo con Arroz</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Costo est.: <span class="font-bold text-slate-900 dark:text-slate-100">$5.200</span></p>
+</div>
+<button class="size-10 flex items-center justify-center bg-primary/10 text-primary rounded-full">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<!-- Dinner Card -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-900/50 p-3 rounded-xl border border-primary/5">
+<div class="size-20 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Ensalada bowl nutritiva con verduras variadas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF5n9eILb2omLU69zlA26NX0jsXrQW6_pNmhkVX97ImPzZ4hvsfpFi__MmLVHcvO3mFUFa69LkjDoxBpGA3TLh_xT_VaYkG2A5Z9eW4obkdKOGncvEslJM7TFcmCobv2QjpBjZFQJodgFGDvkMqYR3BFEA2CnWGzHGYi2nPw50v-UbVdBCPLbqfdPKT22tIPF872IimgJVsN0EIAOm1X4DakkGrixug2QU9vL5Iih44pVxdoRmd5rMgNbyXDWAkC_CpPcTb0xLzh8"/>
+</div>
+<div class="flex-1">
+<p class="text-primary text-xs font-bold uppercase">Cena</p>
+<h4 class="text-slate-900 dark:text-slate-100 font-bold">Ensalada de Quinoa</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Costo est.: <span class="font-bold text-slate-900 dark:text-slate-100">$4.500</span></p>
+</div>
+<button class="size-10 flex items-center justify-center bg-primary/10 text-primary rounded-full">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<button class="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-4 text-slate-900 font-bold shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">auto_fix</span>
+<span>Regenerar Menú Diario</span>
+</button>
+</main>
+<!-- Bottom Navigation Bar -->
+<footer class="fixed bottom-0 left-0 right-0 z-50 border-t border-primary/10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md px-4 pb-6 pt-2">
+<div class="flex justify-between items-center max-w-lg mx-auto">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-900 dark:text-slate-100" href="#">
+<div class="h-8 flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px] fill-[1]">calendar_today</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Menú</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<div class="h-8 flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">restaurant_menu</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Recetas</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<div class="h-8 flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">savings</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Ahorro</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<div class="h-8 flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">person</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Perfil</p>
+</a>
+</div>
+</footer>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .fill-\[1\] {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</body></html>

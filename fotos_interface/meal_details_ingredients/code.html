@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df20d",
+                        "background-light": "#f5f8f5",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>SmartMeal Recipe Detail</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-50 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 justify-between">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Recipe Details</h2>
+<div class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer">
+<span class="material-symbols-outlined">share</span>
+</div>
+</div>
+<main class="flex-1 pb-24">
+<!-- Hero Image Section -->
+<div class="@container">
+<div class="px-4 py-2">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden rounded-xl min-h-80 shadow-lg" data-alt="Delicious lemon herb grilled chicken dish with greens" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRepyJYA8S74ZvTJAqcgqNsZwjODJnA4d3An_y34sVvHPO6pGKR74Iio74-OFTypaFu800oplUu7Icws9P1z3D2tKbLcB9tryGBa3tl2P3vzq9JRxrK0KhFoykLWEys9yyVJ6_I-33mzpBluTAr8IA3_cm3nFmLtBb8ou6GtKweYrmTPATvXBHoBBW2pQjVMr9DJR72CxuDs-bs6d91SUzzQ9APzi-Tyidgk8PYjo-7drY71kisU-RQHRjlwfgAocOgAOJb0bffu8");'>
+</div>
+</div>
+</div>
+<!-- Recipe Info Header -->
+<div class="px-4 pt-6">
+<h1 class="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight">Lemon Herb Grilled Chicken</h1>
+<div class="flex items-center gap-4 mt-3">
+<div class="flex items-center text-primary font-medium text-sm">
+<span class="material-symbols-outlined text-sm mr-1">schedule</span>
+                        25 mins
+                    </div>
+<div class="flex items-center text-primary font-medium text-sm">
+<span class="material-symbols-outlined text-sm mr-1">bolt</span>
+                        Easy
+                    </div>
+<div class="flex items-center text-primary font-medium text-sm">
+<span class="material-symbols-outlined text-sm mr-1">restaurant</span>
+                        450 kcal
+                    </div>
+</div>
+</div>
+<!-- Tab Toggle -->
+<div class="px-4 py-6">
+<div class="flex h-12 w-full items-center justify-center rounded-xl bg-primary/10 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 transition-all has-[:checked]:bg-white dark:has-[:checked]:bg-slate-800 has-[:checked]:shadow-sm text-slate-600 dark:text-slate-400 has-[:checked]:text-primary text-sm font-bold">
+<span class="truncate">Recipe</span>
+<input class="hidden" name="view-toggle" type="radio" value="Recipe"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 transition-all has-[:checked]:bg-white dark:has-[:checked]:bg-slate-800 has-[:checked]:shadow-sm text-slate-600 dark:text-slate-400 has-[:checked]:text-primary text-sm font-bold">
+<span class="truncate">Ingredients</span>
+<input checked="" class="hidden" name="view-toggle" type="radio" value="Ingredients"/>
+</label>
+</div>
+</div>
+<!-- Ingredients Checklist -->
+<div class="px-4 space-y-4">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">6 Items needed</h3>
+<span class="text-xs text-primary bg-primary/10 px-2 py-1 rounded-full font-bold">Select for list</span>
+</div>
+<!-- Ingredient Item -->
+<label class="flex items-center p-4 bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 rounded-xl cursor-pointer group hover:border-primary/50 transition-colors">
+<input checked="" class="w-5 h-5 rounded border-slate-300 dark:border-slate-600 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<div class="ml-4 flex-1">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Chicken breast</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">500g, Freshly cut</p>
+</div>
+<span class="text-primary font-bold text-sm">Required</span>
+</label>
+<!-- Ingredient Item -->
+<label class="flex items-center p-4 bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 rounded-xl cursor-pointer group hover:border-primary/50 transition-colors">
+<input checked="" class="w-5 h-5 rounded border-slate-300 dark:border-slate-600 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<div class="ml-4 flex-1">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Fresh Lemons</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">2 large units</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">info</span>
+</label>
+<!-- Ingredient Item -->
+<label class="flex items-center p-4 bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 rounded-xl cursor-pointer group hover:border-primary/50 transition-colors">
+<input class="w-5 h-5 rounded border-slate-300 dark:border-slate-600 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<div class="ml-4 flex-1">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Extra Virgin Olive Oil</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">50ml bottle</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">info</span>
+</label>
+<!-- Ingredient Item -->
+<label class="flex items-center p-4 bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 rounded-xl cursor-pointer group hover:border-primary/50 transition-colors">
+<input class="w-5 h-5 rounded border-slate-300 dark:border-slate-600 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<div class="ml-4 flex-1">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Fresh Rosemary</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">2 sprigs</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">info</span>
+</label>
+<!-- Ingredient Item -->
+<label class="flex items-center p-4 bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 rounded-xl cursor-pointer group hover:border-primary/50 transition-colors">
+<input class="w-5 h-5 rounded border-slate-300 dark:border-slate-600 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<div class="ml-4 flex-1">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Garlic Cloves</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">3 units, minced</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">info</span>
+</label>
+</div>
+</main>
+<!-- Sticky Bottom CTA -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-100 dark:border-slate-800 p-4">
+<div class="max-w-screen-md mx-auto flex gap-3">
+<button class="flex-1 flex items-center justify-center h-14 bg-primary text-slate-950 font-bold rounded-xl shadow-lg shadow-primary/20 hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined mr-2">shopping_cart</span>
+                    Find in Marketplace
+                </button>
+<button class="size-14 flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 rounded-xl hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>
