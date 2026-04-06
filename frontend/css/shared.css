@@ -1,0 +1,144 @@
+/* ============================================
+   SmartMeal - Estilos compartidos
+   ============================================ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100dvh;
+  background-color: #f5f8f5;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #1e293b;
+}
+
+/* ---- Header ---- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  padding-bottom: 8px;
+  background: #f5f8f5;
+  border-bottom: 1px solid rgba(13,242,13,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header h1 { font-size: 18px; font-weight: 700; color: #1e293b; }
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid rgba(13,242,13,0.1);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  cursor: pointer;
+  color: #475569;
+}
+
+/* ---- Footer navegación ---- */
+.footer-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  border-top: 1px solid rgba(13,242,13,0.1);
+  background: rgba(245,248,245,0.95);
+  backdrop-filter: blur(12px);
+  padding: 8px 16px 24px;
+}
+.footer-nav .nav-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.nav-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: #94a3b8;
+}
+.nav-item.active { color: #0df20d; }
+.nav-item span { font-size: 28px; }
+.nav-item p { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* ---- Botón primario ---- */
+.btn-primary {
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  background: #0df20d;
+  color: #102210;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 8px 24px rgba(13,242,13,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 12px 28px rgba(13,242,13,0.35); }
+
+/* ---- Card blanca ---- */
+.card {
+  background: white;
+  border-radius: 16px;
+  border: 1.5px solid #f1f5f9;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+/* ---- Info banner verde ---- */
+.info-banner {
+  background: rgba(13,242,13,0.08);
+  border: 1px solid rgba(13,242,13,0.2);
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.info-banner .material-symbols-outlined { color: #0df20d; font-size: 20px; margin-top: 2px; }
+.info-banner p { font-size: 12px; color: #475569; line-height: 1.6; }
+
+/* ---- Toast ---- */
+.toast {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #1e293b;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 999;
+  white-space: nowrap;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ---- Scrollbar oculto ---- */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ---- Animación fadeIn ---- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeIn 0.3s ease forwards; }

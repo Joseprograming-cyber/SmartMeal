@@ -1,0 +1,63 @@
+/* ============================================
+   SmartMeal - Login
+   ============================================ */
+
+/* Solo estilos propios del login */
+
+.form-section {
+  display: none;
+}
+
+.form-section.active {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeIn 0.3s ease;
+}
+
+.input-field {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1.5px solid #e2e8f0;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.input-field:focus {
+  border-color: #0df20d;
+  box-shadow: 0 0 0 3px rgba(13,242,13,0.12);
+}
+
+/* Tabs */
+
+.tab-active {
+  background: #0df20d;
+  color: #102210;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+.tab-inactive {
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Divider */
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+}
