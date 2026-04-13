@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mise en Place - Budget Entry</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../css/Budget.css"/>
+</head>
+<body>
+
+  <!-- Top Nav -->
+  <header class="top-nav">
+    <div class="top-nav__inner">
+      <span class="top-nav__logo">Mise en Place</span>
+      <button class="top-nav__btn">
+        <span class="material-symbols-outlined">account_circle</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Layout -->
+  <div class="layout">
+
+    <!-- Side Nav -->
+    <aside class="side-nav">
+      <div class="side-nav__header">
+        <h2 class="side-nav__title">Planner</h2>
+        <p class="side-nav__subtitle">Step-by-step guidance</p>
+      </div>
+      <nav class="side-nav__links">
+        <a href="/views/index.html" class="side-nav__link">
+          <span class="material-symbols-outlined">restaurant</span>
+          Food Entry
+        </a>
+        <a href="/views/Budget.html" class="side-nav__link side-nav__link--active">
+          <span class="material-symbols-outlined">payments</span>
+          Budget
+        </a>
+        <a href="/views/Weeklyplan.html" class="side-nav__link">
+          <span class="material-symbols-outlined">calendar_month</span>
+          Weekly Plan
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="main-content__inner">
+
+        <!-- Formulario central -->
+        <div class="central-form">
+
+          <!-- Barra de progreso -->
+          <div class="progress-bar">
+            <div class="progress-bar__fill"></div>
+          </div>
+
+          <!-- Intro -->
+          <div class="intro-block">
+            <span class="intro-block__icon-wrap">
+              <span class="material-symbols-outlined">account_balance_wallet</span>
+            </span>
+            <h1 class="intro-block__title">Ingresa tu presupuesto semanal.</h1>
+            <p class="intro-block__subtitle">Determinaremos las mejores opciones nutricionales basadas en tu inversión semanal.</p>
+          </div>
+
+          <!-- Input de presupuesto -->
+          <div class="budget-card">
+            <div class="budget-card__input-wrap">
+              <span class="budget-card__symbol">$</span>
+              <input class="budget-card__input" type="number" placeholder="0.00" value="8500"/>
+            </div>
+            <div class="budget-card__warning">
+              <span class="material-symbols-outlined">warning</span>
+              <p class="budget-card__warning-text">El presupuesto es insuficiente para generar un plan semanal (Mínimo $10,000)</p>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="cta-block">
+            <button class="cta-block__primary">Continuar al Plan Semanal</button>
+            <button class="cta-block__secondary">Omitir por ahora</button>
+          </div>
+
+        </div><!-- /central-form -->
+
+        <!-- Info cards -->
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="info-card__body">
+              <div class="info-card__icon-wrap">
+                <span class="material-symbols-outlined">insights</span>
+              </div>
+              <div class="info-card__text">
+                <h3 class="info-card__title">Optimización de Costos</h3>
+                <p class="info-card__desc">Nuestra IA analiza los precios locales de temporada para asegurar que cada peso rinda al máximo en tu nutrición.</p>
+              </div>
+            </div>
+          </div>
+          <div class="savings-card">
+            <span class="material-symbols-outlined">savings</span>
+            <div>
+              <p class="savings-card__label">Ahorro Promedio</p>
+              <p class="savings-card__value">15% mensual</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Decorativos de fondo -->
+        <div class="bg-blur-bottom"></div>
+        <div class="bg-blur-top"></div>
+
+      </div>
+    </main>
+
+  </div><!-- /layout -->
+
+  <!-- Mobile bottom nav -->
+  <nav class="mobile-nav">
+    <a href="#" class="mobile-nav__item">
+      <span class="material-symbols-outlined">restaurant</span>
+      <span class="mobile-nav__label">Food</span>
+    </a>
+    <a href="#" class="mobile-nav__item mobile-nav__item--active">
+      <span class="material-symbols-outlined">payments</span>
+      <span class="mobile-nav__label">Budget</span>
+    </a>
+    <a href="#" class="mobile-nav__item">
+      <span class="material-symbols-outlined">calendar_month</span>
+      <span class="mobile-nav__label">Plan</span>
+    </a>
+  </nav>
+
+  <script>
+  const usuarioId = localStorage.getItem('usuarioId');
+  if (!usuarioId) {
+    window.location.href = '/';
+  }
+
+  const input = document.querySelector('.budget-card__input');
+  const btn = document.querySelector('.cta-block__primary');
+  const warning = document.querySelector('.budget-card__warning');
+
+  async function cargarPresupuesto() {
+    try {
+      const res = await fetch(`/api/presupuesto/${usuarioId}`);
+      const data = await res.json();
+      if (data.monto) input.value = data.monto;
+      validar();
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  function validar() {
+    const val = parseInt(input.value);
+    if (val >= 10000) {
+      if (warning) warning.style.display = 'none';
+      return true;
+    } else {
+      if (warning) warning.style.display = 'flex';
+      return false;
+    }
+  }
+
+  async function guardarPresupuesto() {
+    if (!validar()) {
+      alert('El presupuesto mínimo es $10,000 COP');
+      return;
+    }
+    const monto = parseInt(input.value);
+    try {
+      const res = await fetch('/api/presupuesto', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ usuarioId: parseInt(usuarioId), monto })
+      });
+      if (res.ok) {
+        window.location.href = '/weekly-plan';
+      } else {
+        alert('Error al guardar el presupuesto');
+      }
+    } catch (err) {
+      alert('Error de conexión con el servidor');
+    }
+  }
+
+  input.addEventListener('input', validar);
+  btn.addEventListener('click', guardarPresupuesto);
+  cargarPresupuesto();
+  
+</script>
+</body>
+</html>

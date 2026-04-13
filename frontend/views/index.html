@@ -3,379 +3,323 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <title>Mise en Place - Food Entry</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <!-- Material Symbols -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="../css/shared.css"/>
-<link rel="stylesheet" href="../css/index.css"/>
-  <title>SmartMeal - Menú</title>
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../css/index.css"/>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div style="width:40px"></div>
-    <h1>Tu Menú Semanal</h1>
-    <button class="icon-btn">
-      <span class="material-symbols-outlined">notifications</span>
-    </button>
-  </header>
+  <!-- Top Nav -->
+  <nav class="top-nav">
+    <div class="top-nav__logo">Mise en Place </div>
+    <span class="material-symbols-outlined top-nav__icon">account_circle</span>
+  </nav>
 
-  <!-- Días -->
-  <div class="dias-scroll no-scrollbar">
-    <div class="dias-row">
-      <div class="day-tab active" onclick="cambiarDia(0,this)">
-        <span class="dia-nombre">Lun</span><span class="dia-num">31</span>
+  <!-- Layout principal -->
+  <div class="layout">
+
+    <!-- Side Nav -->
+    <aside class="side-nav">
+      <div class="side-nav__header">
+        <p class="side-nav__title">Planner</p>
+        <p class="side-nav__subtitle">Step-by-step guidance</p>
       </div>
-      <div class="day-tab inactive" onclick="cambiarDia(1,this)">
-        <span class="dia-nombre">Mar</span><span class="dia-num">1</span>
+      <nav class="side-nav__links">
+        <a href="/views/index.html" class="side-nav__link side-nav__link--active">
+          <span class="material-symbols-outlined">restaurant</span>
+          Food Entry
+        </a>
+        <a href="/views/Budget.html" class="side-nav__link">
+          <span class="material-symbols-outlined">payments</span>
+          Budget
+        </a>
+        <a href="/views/Weeklyplan.html" class="side-nav__link">
+          <span class="material-symbols-outlined">calendar_month</span>
+          Weekly Plan
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <div class="main-content__inner">
+
+        <!-- Encabezado -->
+        <header class="page-header">
+          <h1 class="page-header__title">Food Entry</h1>
+          <p class="page-header__subtitle">Para continuar, agrega los alimentos requeridos.</p>
+        </header>
+
+        <!-- Grid de categorías -->
+        <div class="categories-grid">
+
+          <!-- Proteínas -->
+          <section class="category-card">
+            <div class="category-card__header">
+              <div class="category-card__title-group">
+                <span class="material-symbols-outlined category-card__icon">kebab_dining</span>
+                <h2 class="category-card__title">proteínas</h2>
+              </div>
+              <span class="category-card__badge">0/4 Min.</span>
+            </div>
+            <div class="input-row">
+              <input class="input-row__name" type="text" placeholder="Nombre"/>
+              <input class="input-row__price" type="number" placeholder="$ 0.00"/>
+              <button class="input-row__btn">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </div>
+            <div class="items-list">
+              <div class="item-row">
+                <span class="item-row__name">Pollo Orgánico</span>
+                <div class="item-row__right">
+                  <span class="item-row__price">$ 12.50</span>
+                  <button class="item-row__delete">
+                    <span class="material-symbols-outlined">delete</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Carbohidratos -->
+          <section class="category-card category-card--offset">
+            <div class="category-card__header">
+              <div class="category-card__title-group">
+                <span class="material-symbols-outlined category-card__icon">bakery_dining</span>
+                <h2 class="category-card__title">carbohidratos</h2>
+              </div>
+              <span class="category-card__badge">0/4 Min.</span>
+            </div>
+            <div class="input-row">
+              <input class="input-row__name" type="text" placeholder="Nombre"/>
+              <input class="input-row__price" type="number" placeholder="$ 0.00"/>
+              <button class="input-row__btn">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </div>
+            <div class="items-list">
+              <div class="empty-state">
+                <p class="empty-state__text">No hay elementos agregados</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Verduras -->
+          <section class="category-card">
+            <div class="category-card__header">
+              <div class="category-card__title-group">
+                <span class="material-symbols-outlined category-card__icon">eco</span>
+                <h2 class="category-card__title">verduras</h2>
+              </div>
+              <span class="category-card__badge">0/4 Min.</span>
+            </div>
+            <div class="input-row">
+              <input class="input-row__name" type="text" placeholder="Nombre"/>
+              <input class="input-row__price" type="number" placeholder="$ 0.00"/>
+              <button class="input-row__btn">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </div>
+            <div class="items-list">
+              <div class="empty-state">
+                <p class="empty-state__text">No hay elementos agregados</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Otros -->
+          <section class="category-card category-card--offset">
+            <div class="category-card__header">
+              <div class="category-card__title-group">
+                <span class="material-symbols-outlined category-card__icon">shopping_basket</span>
+                <h2 class="category-card__title">otros</h2>
+              </div>
+              <span class="category-card__badge">0/4 Min.</span>
+            </div>
+            <div class="input-row">
+              <input class="input-row__name" type="text" placeholder="Nombre"/>
+              <input class="input-row__price" type="number" placeholder="$ 0.00"/>
+              <button class="input-row__btn">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </div>
+            <div class="items-list">
+              <div class="empty-state">
+                <p class="empty-state__text">No hay elementos agregados</p>
+              </div>
+            </div>
+          </section>
+
+        </div><!-- /categories-grid -->
+
+        <!-- Footer de acción -->
+        <div class="action-footer">
+          <div class="action-footer__info">
+            <span class="material-symbols-outlined">info</span>
+            <p class="action-footer__text">Agrega al menos 4 ítems en cada categoría para desbloquear la planificación semanal.</p>
+          </div>
+          <button class="action-footer__btn" onclick="window.location.href='/views/budget.html'" disabled>
+            Regenerar y Continuar
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
+        </div>
+
       </div>
-      <div class="day-tab inactive" onclick="cambiarDia(2,this)">
-        <span class="dia-nombre">Mié</span><span class="dia-num">2</span>
-      </div>
-      <div class="day-tab inactive" onclick="cambiarDia(3,this)">
-        <span class="dia-nombre">Jue</span><span class="dia-num">3</span>
-      </div>
-      <div class="day-tab inactive" onclick="cambiarDia(4,this)">
-        <span class="dia-nombre">Vie</span><span class="dia-num">4</span>
-      </div>
-      <div class="day-tab inactive" onclick="cambiarDia(5,this)">
-        <span class="dia-nombre">Sáb</span><span class="dia-num">5</span>
-      </div>
-      <div class="day-tab inactive" onclick="cambiarDia(6,this)">
-        <span class="dia-nombre">Dom</span><span class="dia-num">6</span>
-      </div>
-    </div>
+    </main>
+
+  </div><!-- /layout -->
+
+  <!-- Decorativo de fondo -->
+  <div class="bg-accent">
+    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo23mPtZk-gMNOOFshfChfR53_eAsL9Gj3O1I_2L7PjujDm2d-r3czoHxms-f-3lUKZIDZE5xsr_Dpu__xUm3D88cm6JvS979CAx-ZGlnxq7IQnOwui2_I2fed6P_2QfLnbbOkTVizC-2F5uRWvIODLLGWjnyZ7JuqjEN_1TBTuROsjeWr4xM1wBbK3KSduuDLjNpGP5JJX_T6we665KPeB21Nlvk-a5x-dWVrDqlis9Luzj0sXmVN9TuTh9XuGM4guGl302HzmdQ" alt="Fresh herbs"/>
   </div>
 
-  <!-- Info día -->
-  <div class="dia-info">
-    <span class="dia-label" id="dia-label">Lunes</span>
-    <span class="costo">Costo: <span id="costo-dia">$7.100</span></span>
-  </div>
+<script>
+  // Obtener el ID del usuario guardado en localStorage
+  const usuarioId = localStorage.getItem('usuarioId');
+  if (!usuarioId) {
+    window.location.href = '/';
+  }
 
-  <!-- Comidas -->
-  <div class="content">
-
-    <!-- Lunes -->
-    <div id="dia-0" class="meal-section active">
-      <div>
-        <p class="meal-tipo">🌅 Desayuno</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#fff7ed">🥚</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Huevos revueltos con arepa</p>
-            <p class="meal-desc">Proteína · Carbohidratos</p>
-            <p class="meal-precio">$2.500</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-      <div>
-        <p class="meal-tipo">☀️ Almuerzo</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#f0fdf4">🍚</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Arroz con lentejas y ensalada</p>
-            <p class="meal-desc">Carbohidratos · Fibra</p>
-            <p class="meal-precio">$3.000</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-      <div>
-        <p class="meal-tipo">🌙 Cena</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#eff6ff">🥦</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Sopa de verduras</p>
-            <p class="meal-desc">Vitaminas · Minerales</p>
-            <p class="meal-precio">$1.600</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Martes -->
-    <div id="dia-1" class="meal-section">
-      <div>
-        <p class="meal-tipo">🌅 Desayuno</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#fefce8">🌾</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Avena con banano</p>
-            <p class="meal-desc">Fibra · Energía</p>
-            <p class="meal-precio">$2.000</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-      <div>
-        <p class="meal-tipo">☀️ Almuerzo</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#fef2f2">🫘</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Frijoles con arroz</p>
-            <p class="meal-desc">Proteína · Carbohidratos</p>
-            <p class="meal-precio">$3.500</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-      <div>
-        <p class="meal-tipo">🌙 Cena</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#faf5ff">🍞</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Pan con queso y chocolate</p>
-            <p class="meal-desc">Calcio · Energía</p>
-            <p class="meal-precio">$1.500</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Miércoles -->
-    <div id="dia-2" class="meal-section">
-      <div>
-        <p class="meal-tipo">🌅 Desayuno</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#eff6ff">🥛</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Changua con pan</p>
-            <p class="meal-desc">Proteína · Calcio</p>
-            <p class="meal-precio">$2.200</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-      <div>
-        <p class="meal-tipo">☀️ Almuerzo</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#fffbeb">🍗</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Pollo sudado con papa</p>
-            <p class="meal-desc">Proteína · Vitaminas</p>
-            <p class="meal-precio">$3.800</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-      <div>
-        <p class="meal-tipo">🌙 Cena</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#f0fdf4">🥣</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Crema de ahuyama</p>
-            <p class="meal-desc">Vitaminas · Antioxidantes</p>
-            <p class="meal-precio">$1.800</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Jueves -->
-    <div id="dia-3" class="meal-section">
-      <div>
-        <p class="meal-tipo">🌅 Desayuno</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#fefce8">🌽</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Arepa con mantequilla y café</p>
-            <p class="meal-desc">Carbohidratos · Energía</p>
-            <p class="meal-precio">$1.800</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-      <div>
-        <p class="meal-tipo">☀️ Almuerzo</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#fef2f2">🍲</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Sancocho de pollo</p>
-            <p class="meal-desc">Proteína · Minerales</p>
-            <p class="meal-precio">$3.500</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-      <div>
-        <p class="meal-tipo">🌙 Cena</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#faf5ff">🍚</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Arroz con leche</p>
-            <p class="meal-desc">Calcio · Carbohidratos</p>
-            <p class="meal-precio">$1.500</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Viernes -->
-    <div id="dia-4" class="meal-section">
-      <div>
-        <p class="meal-tipo">🌅 Desayuno</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#fff7ed">🥚</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Huevos pericos con arepa</p>
-            <p class="meal-desc">Proteína · Carbohidratos</p>
-            <p class="meal-precio">$2.500</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-      <div>
-        <p class="meal-tipo">☀️ Almuerzo</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#eff6ff">🐟</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Pescado frito con patacones</p>
-            <p class="meal-desc">Proteína · Omega 3</p>
-            <p class="meal-precio">$4.000</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-      <div>
-        <p class="meal-tipo">🌙 Cena</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#f0fdf4">🍝</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Sopa de pasta</p>
-            <p class="meal-desc">Carbohidratos · Energía</p>
-            <p class="meal-precio">$1.500</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Sábado -->
-    <div id="dia-5" class="meal-section">
-      <div>
-        <p class="meal-tipo">🌅 Desayuno</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#fefce8">🫘</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Calentado de frijoles</p>
-            <p class="meal-desc">Proteína · Fibra</p>
-            <p class="meal-precio">$2.500</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-      <div>
-        <p class="meal-tipo">☀️ Almuerzo</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#fef2f2">🥩</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Bandeja de arroz con carne</p>
-            <p class="meal-desc">Proteína · Hierro</p>
-            <p class="meal-precio">$4.000</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-      <div>
-        <p class="meal-tipo">🌙 Cena</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#faf5ff">🫔</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Empanadas de pipián</p>
-            <p class="meal-desc">Carbohidratos · Sabor</p>
-            <p class="meal-precio">$1.500</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Domingo -->
-    <div id="dia-6" class="meal-section">
-      <div>
-        <p class="meal-tipo">🌅 Desayuno</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#fff7ed">🫔</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Tamal con chocolate</p>
-            <p class="meal-desc">Proteína · Carbohidratos</p>
-            <p class="meal-precio">$3.000</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-      <div>
-        <p class="meal-tipo">☀️ Almuerzo</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#f0fdf4">🍲</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Ajiaco bogotano</p>
-            <p class="meal-desc">Vitaminas · Minerales</p>
-            <p class="meal-precio">$4.000</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-      <div>
-        <p class="meal-tipo">🌙 Cena</p>
-        <div class="meal-card">
-          <div class="meal-icon" style="background:#fffbeb">🌽</div>
-          <div class="meal-info">
-            <p class="meal-nombre">Mazamorra con panela</p>
-            <p class="meal-desc">Carbohidratos · Calcio</p>
-            <p class="meal-precio">$1.500</p>
-          </div>
-          <span class="material-symbols-outlined meal-arrow">chevron_right</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Botón regenerar -->
-    <div class="btn-regenerar">
-      <button class="btn-primary" onclick="alert('¡Menú regenerado!')">
-        <span class="material-symbols-outlined">auto_fix</span>
-        Regenerar menú semanal
-      </button>
-    </div>
-
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer-nav">
-    <div class="nav-inner">
-      <a class="nav-item active" href="menu_semanal.html">
-        <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">calendar_today</span>
-        <p>Menú</p>
-      </a>
-      <a class="nav-item" href="precios.html">
-        <span class="material-symbols-outlined">tune</span>
-        <p>Precios</p>
-      </a>
-      <a class="nav-item" href="perfil.html">
-        <span class="material-symbols-outlined">person</span>
-        <p>Perfil</p>
-      </a>
-    </div>
-  </footer>
-
-  <script>
-    const dias = ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
-    const costos = [7100,7000,7800,6800,8000,8000,8500];
-    function cambiarDia(i, el) {
-      document.querySelectorAll('.day-tab').forEach(t => { t.classList.remove('active'); t.classList.add('inactive'); });
-      el.classList.remove('inactive'); el.classList.add('active');
-      document.querySelectorAll('.meal-section').forEach(s => s.classList.remove('active'));
-      document.getElementById('dia-' + i).classList.add('active');
-      document.getElementById('dia-label').textContent = dias[i];
-      document.getElementById('costo-dia').textContent = '$' + costos[i].toLocaleString('es-CO');
+  // Función para cargar y mostrar ingredientes
+  async function cargarIngredientes() {
+    try {
+      const res = await fetch(`/api/ingredientes/${usuarioId}`);
+      if (!res.ok) throw new Error('Error al cargar');
+      const ingredientes = await res.json();
+      mostrarIngredientes(ingredientes);
+      actualizarContadores(ingredientes);
+    } catch (err) {
+      console.error(err);
+      alert('Error al cargar ingredientes');
     }
-  </script>
+  }
+
+  function mostrarIngredientes(ingredientes) {
+    const categorias = ['proteínas', 'carbohidratos', 'verduras', 'otros'];
+    const contenedores = document.querySelectorAll('.category-card .items-list');
+    for (let i = 0; i < categorias.length; i++) {
+      const categoria = categorias[i];
+      const contenedor = contenedores[i];
+      if (!contenedor) continue;
+      const filtrados = ingredientes.filter(ing => ing.categoria === categoria);
+      if (filtrados.length === 0) {
+        contenedor.innerHTML = '<div class="empty-state"><p class="empty-state__text">No hay elementos agregados</p></div>';
+      } else {
+        contenedor.innerHTML = filtrados.map(ing => `
+          <div class="item-row" data-id="${ing.id}">
+            <span class="item-row__name">${escapeHtml(ing.nombre)}</span>
+            <div class="item-row__right">
+              <span class="item-row__price">$ ${ing.precio.toLocaleString('es-CO')}</span>
+              <button class="item-row__delete" onclick="eliminarIngrediente(${ing.id})">
+                <span class="material-symbols-outlined">delete</span>
+              </button>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+  }
+
+  function actualizarContadores(ingredientes) {
+    const cards = document.querySelectorAll('.category-card');
+    const categorias = ['proteínas', 'carbohidratos', 'verduras', 'otros'];
+    cards.forEach((card, idx) => {
+      if (idx >= categorias.length) return;
+      const cat = categorias[idx];
+      const count = ingredientes.filter(i => i.categoria === cat).length;
+      const badge = card.querySelector('.category-card__badge');
+      if (badge) badge.textContent = `${count}/4 Min.`;
+    });
+    // Verificar si todos tienen al menos 4
+    const todosOk = categorias.every(cat => ingredientes.filter(i => i.categoria === cat).length >= 4);
+    const btn = document.querySelector('.action-footer__btn');
+    if (btn) btn.disabled = !todosOk;
+  }
+
+  function escapeHtml(str) {
+    return str.replace(/[&<>]/g, function(m) {
+      if (m === '&') return '&amp;';
+      if (m === '<') return '&lt;';
+      if (m === '>') return '&gt;';
+      return m;
+    });
+  }
+
+  // Agregar ingrediente
+  async function agregarIngrediente(categoria, nombre, precio) {
+    try {
+      const res = await fetch('/api/ingredientes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ usuarioId: parseInt(usuarioId), categoria, nombre, precio })
+      });
+      if (!res.ok) throw new Error('Error al guardar');
+      cargarIngredientes(); // Recargar la lista
+    } catch (err) {
+      console.error(err);
+      alert('Error al guardar el ingrediente');
+    }
+  }
+
+  window.eliminarIngrediente = async function(id) {
+    try {
+      const res = await fetch(`/api/ingredientes/${id}`, { method: 'DELETE' });
+      if (!res.ok) throw new Error('Error al eliminar');
+      cargarIngredientes();
+    } catch (err) {
+      console.error(err);
+      alert('Error al eliminar');
+    }
+  };
+
+  // Inicializar botones "+"
+  function inicializarBotones() {
+    const categorias = ['proteínas', 'carbohidratos', 'verduras', 'otros'];
+    const cards = document.querySelectorAll('.category-card');
+    for (let i = 0; i < cards.length && i < categorias.length; i++) {
+      const card = cards[i];
+      const categoria = categorias[i];
+      const inputNombre = card.querySelector('.input-row__name');
+      const inputPrecio = card.querySelector('.input-row__price');
+      const btn = card.querySelector('.input-row__btn');
+      if (btn) {
+        btn.onclick = () => {
+          const nombre = inputNombre.value.trim();
+          const precio = parseInt(inputPrecio.value);
+          if (!nombre || isNaN(precio) || precio <= 0) {
+            alert('Ingresa un nombre y un precio válido (número entero en pesos)');
+            return;
+          }
+          agregarIngrediente(categoria, nombre, precio);
+          inputNombre.value = '';
+          inputPrecio.value = '';
+        };
+      }
+    }
+  }
+
+  // Configurar botón "Regenerar y continuar"
+  const btnContinuar = document.querySelector('.action-footer__btn');
+  if (btnContinuar) {
+    btnContinuar.onclick = () => {
+      if (!btnContinuar.disabled) {
+        window.location.href = '/budget';
+      }
+    };
+  }
+
+  // Cargar todo al inicio
+  cargarIngredientes();
+  inicializarBotones();
+</script>
+
+
 
 </body>
 </html>

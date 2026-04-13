@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mise en Place - Weekly Plan</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../css/weeklyplan.css"/>
+</head>
+<body>
+
+  <!-- Top Nav -->
+  <header class="top-nav">
+    <div class="top-nav__inner">
+      <span class="top-nav__logo">Mise en Place</span>
+      <button class="top-nav__btn">
+        <span class="material-symbols-outlined">account_circle</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Layout -->
+  <div class="layout">
+
+    <!-- Side Nav -->
+    <aside class="side-nav">
+      <div class="side-nav__header">
+        <h2 class="side-nav__title">Planner</h2>
+        <p class="side-nav__subtitle">Step-by-step guidance</p>
+      </div>
+      <nav class="side-nav__links">
+        <a href="/views/index.html" class="side-nav__link">
+          <span class="material-symbols-outlined">restaurant</span>
+          <span>Food Entry</span>
+        </a>
+        <a href="/views/Budget.html" class="side-nav__link">
+          <span class="material-symbols-outlined">payments</span>
+          <span>Budget</span>
+        </a>
+        <a href="/views/Weeklyplan.html" class="side-nav__link side-nav__link--active">
+          <span class="material-symbols-outlined">calendar_month</span>
+          <span>Weekly Plan</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div>
+          <h1 class="page-header__title">Weekly Summary</h1>
+          <p class="page-header__subtitle">Your curated seven-day nutrition roadmap. Balanced for nutrients and optimized for your budget.</p>
+        </div>
+        <div class="budget-summary">
+          <span class="budget-summary__label">Total Weekly Cost</span>
+          <span class="budget-summary__total">$0</span>
+          <span class="budget-summary__note">--</span>
+        </div>
+      </div>
+
+      <!-- Days Grid -->
+      <div class="days-grid">
+
+        <!-- Monday -->
+        <div class="day-card day-card--2col">
+          <div class="day-card__header">
+            <span class="day-card__name">Monday</span>
+            <span class="day-card__cost">$0</span>
+          </div>
+          <div class="meals-list">
+            <div class="meal">
+              <span class="meal__label">Breakfast</span>
+              <p class="meal__text"></p>
+            </div>
+            <div class="meal">
+              <span class="meal__label">Lunch</span>
+              <p class="meal__text"></p>
+            </div>
+            <div class="meal">
+              <span class="meal__label">Dinner</span>
+              <p class="meal__text"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tuesday -->
+        <div class="day-card day-card--2col day-card--tonal">
+          <div class="day-card__header">
+            <span class="day-card__name">Tuesday</span>
+            <span class="day-card__cost">$0</span>
+          </div>
+          <div class="meals-list">
+            <div class="meal">
+              <span class="meal__label">Breakfast</span>
+              <p class="meal__text"></p>
+            </div>
+            <div class="meal">
+              <span class="meal__label">Lunch</span>
+              <p class="meal__text"></p>
+            </div>
+            <div class="meal">
+              <span class="meal__label">Dinner</span>
+              <p class="meal__text"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wednesday (featured) -->
+        <div class="day-card day-card--3col day-card--featured">
+          <div class="day-card__header">
+            <span class="day-card__name">Wednesday</span>
+            <span class="day-card__cost">$0</span>
+          </div>
+          <div class="meals-list">
+            <div class="meal">
+              <span class="meal__label">Breakfast</span>
+              <p class="meal__text"></p>
+            </div>
+            <div class="meal">
+              <span class="meal__label">Lunch</span>
+              <p class="meal__text"></p>
+            </div>
+            <div class="meal">
+              <span class="meal__label">Dinner</span>
+              <p class="meal__text"></p>
+            </div>
+          </div>
+          <div class="featured-note">
+            <span class="material-symbols-outlined">info</span>
+            <span class="featured-note__text">High protein focus today for mid-week recovery.</span>
+          </div>
+        </div>
+
+        <!-- Thursday -->
+        <div class="day-card day-card--2col day-card--tonal">
+          <div class="day-card__header">
+            <span class="day-card__name">Thursday</span>
+            <span class="day-card__cost">$0</span>
+          </div>
+          <div class="meals-list">
+            <div class="meal">
+              <span class="meal__label">Breakfast</span>
+              <p class="meal__text"></p>
+            </div>
+            <div class="meal">
+              <span class="meal__label">Lunch</span>
+              <p class="meal__text"></p>
+            </div>
+            <div class="meal">
+              <span class="meal__label">Dinner</span>
+              <p class="meal__text"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Friday -->
+        <div class="day-card day-card--2col">
+          <div class="day-card__header">
+            <span class="day-card__name">Friday</span>
+            <span class="day-card__cost">$0</span>
+          </div>
+          <div class="meals-list">
+            <div class="meal">
+              <span class="meal__label">Breakfast</span>
+              <p class="meal__text"></p>
+            </div>
+            <div class="meal">
+              <span class="meal__label">Lunch</span>
+              <p class="meal__text"></p>
+            </div>
+            <div class="meal">
+              <span class="meal__label">Dinner</span>
+              <p class="meal__text"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Saturday -->
+        <div class="day-card day-card--3col day-card--tonal">
+          <div class="saturday-card">
+            <div class="saturday-card__content">
+              <div class="day-card__header">
+                <span class="day-card__name">Saturday</span>
+                <span class="day-card__cost">$0</span>
+              </div>
+              <div class="saturday-card__meals-grid">
+                <div class="meal">
+                  <span class="meal__label">Breakfast</span>
+                  <p class="meal__text"></p>
+                </div>
+                <div class="meal">
+                  <span class="meal__label">Lunch</span>
+                  <p class="meal__text"></p>
+                </div>
+                <div class="meal saturday-card__meal--full">
+                  <span class="meal__label">Dinner</span>
+                  <p class="meal__text"></p>
+                </div>
+              </div>
+            </div>
+            <div class="saturday-card__img">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAuX-7469_lPTvjVYhFm9BNPKef1qv_55lNkHLU1xIkDq4jasF78F-rcTi1PFKKriFgp4x63Mhhc2Mpm8Rdq12qJIGwcl-33f2xdFES4Pg6PLp9V5ee72UHKZYnZzE77KlgkC2dLDcBIsFoo1gIC15C1adhqGppnV6YkXlcEm6-DkP88hyhJHgmBeCLbmcTkmQFBJOq_aDLTWcIiSRwqsJdYFav3N6c5WeGtSjX3Kv35gzt2W5VtFkH6O_PWcfL7IqM-ca8fqGOgI" alt="Taco platter"/>
+            </div>
+          </div>
+        </div>
+      </div><!-- /days-grid -->
+
+
+
+    </main>
+
+  </div><!-- /layout -->
+
+  <!-- Mobile bottom nav -->
+  <nav class="mobile-nav">
+    <button class="mobile-nav__btn">
+      <span class="material-symbols-outlined">restaurant</span>
+      <span class="mobile-nav__label">Food</span>
+    </button>
+    <button class="mobile-nav__btn">
+      <span class="material-symbols-outlined">payments</span>
+      <span class="mobile-nav__label">Budget</span>
+    </button>
+    <button class="mobile-nav__btn mobile-nav__btn--active">
+      <span class="material-symbols-outlined">calendar_month</span>
+      <span class="mobile-nav__label">Plan</span>
+    </button>
+  </nav>
+
+<script>
+  const usuarioId = localStorage.getItem('usuarioId');
+  if (!usuarioId) window.location.href = '/';
+
+  async function generarPlan() {
+    try {
+      const resIng = await fetch(`/api/ingredientes/${usuarioId}`);
+      if (!resIng.ok) throw new Error('Error al cargar ingredientes');
+      let ingredientes = await resIng.json();
+
+      // Verificar que cada categoría tenga al menos 4 ingredientes
+      const categoriasValidas = ['proteínas', 'carbohidratos', 'verduras', 'otros'];
+      let faltantes = [];
+      for (let cat of categoriasValidas) {
+        if (ingredientes.filter(i => i.categoria === cat).length < 4) {
+          faltantes.push(cat);
+        }
+      }
+      if (faltantes.length > 0) {
+        alert(`Faltan ingredientes en: ${faltantes.join(', ')}. Agrega al menos 4 en cada categoría.`);
+        window.location.href = '/food-entry';
+        return;
+      }
+
+      const resPres = await fetch(`/api/presupuesto/${usuarioId}`);
+      const presupuestoData = await resPres.json();
+      let presupuesto = presupuestoData.monto || 50000;
+
+      // Separar por categorías
+      const proteinas = ingredientes.filter(i => i.categoria === 'proteínas');
+      const carbos = ingredientes.filter(i => i.categoria === 'carbohidratos');
+      const verduras = ingredientes.filter(i => i.categoria === 'verduras');
+      const otros = ingredientes.filter(i => i.categoria === 'otros');
+
+      // Función para obtener elemento aleatorio
+      const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+      const diasSemana = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+      const plan = {};
+      let totalSemana = 0;
+
+      for (let dia of diasSemana) {
+        // Desayuno: carbohidrato + proteína + algo de otros
+        let carboDes = getRandom(carbos);
+        let proteDes = getRandom(proteinas);
+        let otroDes = getRandom(otros);
+        const desayuno = `${carboDes.nombre} con ${proteDes.nombre} y ${otroDes.nombre}`;
+        const costoDesayuno = carboDes.precio + proteDes.precio + otroDes.precio;
+
+        // Almuerzo: proteína + carbohidrato + verdura + otros
+        let proteAlm = getRandom(proteinas);
+        let carboAlm = getRandom(carbos);
+        let verduraAlm = getRandom(verduras);
+        let otroAlm = getRandom(otros);
+        const almuerzo = `${proteAlm.nombre} con ${carboAlm.nombre}, ${verduraAlm.nombre} y ${otroAlm.nombre}`;
+        const costoAlmuerzo = proteAlm.precio + carboAlm.precio + verduraAlm.precio + otroAlm.precio;
+
+        // Cena: verdura + proteína + otros
+        let verduraCen = getRandom(verduras);
+        let proteCen = getRandom(proteinas);
+        let otroCen = getRandom(otros);
+        const cena = `${verduraCen.nombre} salteada con ${proteCen.nombre} y ${otroCen.nombre}`;
+        const costoCena = verduraCen.precio + proteCen.precio + otroCen.precio;
+
+        const costoDia = costoDesayuno + costoAlmuerzo + costoCena;
+        totalSemana += costoDia;
+        plan[dia] = { desayuno, almuerzo, cena, costoDia };
+      }
+
+      // Ajuste por presupuesto
+      if (totalSemana > presupuesto && totalSemana > 0) {
+        const factor = presupuesto / totalSemana;
+        for (let dia in plan) {
+          plan[dia].costoDia = Math.floor(plan[dia].costoDia * factor);
+        }
+        totalSemana = presupuesto;
+      }
+
+      // Mostrar en el DOM
+      const dayCards = document.querySelectorAll('.day-card');
+      for (let i = 0; i < dayCards.length && i < diasSemana.length; i++) {
+        const card = dayCards[i];
+        const dia = diasSemana[i];
+        const p = plan[dia];
+        const costSpan = card.querySelector('.day-card__cost');
+        if (costSpan) costSpan.textContent = `$${p.costoDia.toLocaleString('es-CO')}`;
+
+        if (dia === 'Sunday') {
+          const sundayMeals = card.querySelectorAll('.sunday-meal__text');
+          if (sundayMeals[0]) sundayMeals[0].textContent = p.desayuno;
+          if (sundayMeals[1]) sundayMeals[1].textContent = p.almuerzo;
+          if (sundayMeals[2]) sundayMeals[2].textContent = p.cena;
+          const sundaySubtitle = card.querySelector('.sunday-card__subtitle');
+          if (sundaySubtitle) sundaySubtitle.textContent = `Minimalist Day · $${p.costoDia.toLocaleString('es-CO')}`;
+        } else {
+          const meals = card.querySelectorAll('.meal');
+          if (meals[0]) meals[0].querySelector('.meal__text').textContent = p.desayuno;
+          if (meals[1]) meals[1].querySelector('.meal__text').textContent = p.almuerzo;
+          if (meals[2]) meals[2].querySelector('.meal__text').textContent = p.cena;
+        }
+      }
+
+      const totalSpan = document.querySelector('.budget-summary__total');
+      const noteSpan = document.querySelector('.budget-summary__note');
+      if (totalSpan) totalSpan.textContent = `$${totalSemana.toLocaleString('es-CO')}`;
+      const diff = presupuesto - totalSemana;
+      if (noteSpan) {
+        noteSpan.textContent = diff >= 0 ? `Bajo presupuesto por $${diff.toLocaleString('es-CO')}` : `Sobrepasa por $${Math.abs(diff).toLocaleString('es-CO')}`;
+        noteSpan.style.color = diff >= 0 ? '#0df20d' : '#ff4444';
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Error al generar el plan');
+    }
+  }
+
+  generarPlan();
+</script>
+
+</body>
+</html>
