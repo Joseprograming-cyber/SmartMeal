@@ -1,3 +1,8 @@
+
+
+<img width="1286" height="632" alt="Captura de pantalla 2026-04-13 174248" src="https://github.com/user-attachments/assets/88924de1-c59d-40a3-893d-4d41f360caeb" />
+
+
 ## Modelo de Datos
 
 ### Diagrama Entidad-Relación
